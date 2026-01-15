@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contacto tienda videojuegos</title>
-</head>
-<body>
-    <h1>Contacto</h1>
-    <p>Envia un correo a contacto@tiendavideojuegos.com</p>
+{% extends "base.html" %}
+{% load static %}
 
-    <footer>
-        <p>copyright 2026 Tienda de Videojuegos</p>
-        <a href="{% url 'home' %}">home</a>
-    </footer>
-</body>
-</html>
+{% block title %}Contacto - Tienda de Videojuegos{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-body">Contacto</h1>
+    <p class="text-body">Envia un correo a <a href="mailto:contacto@tiendavideojuegos.com">contacto@tiendavideojuegos.com</a></p>
+
+    <div class="alert alert-primary">Estamos disponibles de lunes a viernes de 9:00 a 18:00.</div>
+    <div class="alert alert-warning">Nuestro tiempo de respuesta es de 24 a 48 horas.</div>
+    <div class="alert alert-danger">Para consultas urgentes, por favor llama a nuestro numero de atencion al cliente.</div>
+</div>
+{% endblock %}
